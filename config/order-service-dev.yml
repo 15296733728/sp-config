@@ -1,7 +1,11 @@
 spring:
   application:
     name: order-service
- 
+  rabbitmq:
+    host: 192.168.195.130
+    port: 5672
+    username: admin
+    password: admin
 #server:
   #port: 8201
 
@@ -11,12 +15,12 @@ eureka:
     service-url:
       defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
    
-#启用hystrix   
+#鍚敤hystrix   
 feign:
   hystrix:
     enabled: true
     
-#暴露hystrix的监控端点
+#鏆撮湶hystrix鐨勭洃鎺х鐐�
 management:
   endpoints:
     web:
